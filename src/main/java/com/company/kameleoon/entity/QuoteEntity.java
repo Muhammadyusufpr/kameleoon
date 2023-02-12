@@ -10,17 +10,17 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @Entity
-@Table(name = "quote")
+@Table(name = "quotes")
 public class QuoteEntity extends BaseEntity {
     //content, date of creation / update, link to user who posted it, link to votes;
     @Column
     private String content;
 
-    @Column(name = "user_id")
-    private String userId;
+    @Column(name = "profile_id")
+    private String profileId;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
-    private UserEntity user;
+    @JoinColumn(name = "profile_id", insertable = false, updatable = false)
+    private ProfileEntity profile;
 
     @Column
     @CreationTimestamp

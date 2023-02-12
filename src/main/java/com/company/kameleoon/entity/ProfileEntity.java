@@ -7,8 +7,8 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-@Table(name = "user")
-public class UserEntity extends BaseEntity {
+@Table(name = "profile")
+public class ProfileEntity extends BaseEntity {
     //name, email, password and date of creation;
     @Column
     private String name;
@@ -19,9 +19,7 @@ public class UserEntity extends BaseEntity {
     @Column
     private String password;
 
-    @Column(name = "quote_id")
-    private String quoteId;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "quote_id", insertable = false, updatable = false)
-    private QuoteEntity quote;
+    @Column
+    private boolean isEnable;
+
 }
