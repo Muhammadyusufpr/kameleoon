@@ -3,8 +3,8 @@ package com.company.kameleoon.service;
 import com.company.kameleoon.dto.detail.ApiResponse;
 import com.company.kameleoon.dto.request.QuoteRequestDTO;
 import com.company.kameleoon.dto.response.QuoteResponseDTO;
-import com.company.kameleoon.entity.QuoteEntity;
 import com.company.kameleoon.entity.ProfileEntity;
+import com.company.kameleoon.entity.QuoteEntity;
 import com.company.kameleoon.repository.QuoteRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +12,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.LinkedList;
 import java.util.List;
 
 @Slf4j

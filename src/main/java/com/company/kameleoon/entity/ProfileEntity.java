@@ -1,6 +1,8 @@
 package com.company.kameleoon.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,8 +20,5 @@ public class ProfileEntity extends BaseEntity {
 
     @Column
     private String password;
-
-    @Column
-    private boolean isEnable;
 
 }

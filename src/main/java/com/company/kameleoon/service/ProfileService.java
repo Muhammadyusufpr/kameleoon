@@ -37,10 +37,6 @@ public class ProfileService {
     public ApiResponse<ProfileResponseDTO> update(String id, ProfileRequestDTO dto) {
         ProfileEntity entity = get(id);
 
-        if (entity == null) {
-            log.info("User not found!{}", id);
-            return new ApiResponse<>("User not found!", true);
-        }
         entity.setName(dto.getName());
         entity.setEmail(dto.getEmail());
         entity.setPassword(dto.getPassword());

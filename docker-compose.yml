@@ -1,11 +1,9 @@
 version: "1.0"
 services:
   web:
-    build:
-      context: .
-    container_name: kameleoon
+    image: gapirov/kameleoon-web
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/task
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/kameleoon
     ports:
       - "8080:8080"
     depends_on:
@@ -17,4 +15,3 @@ services:
       - POSTGRES_USER=java_db_user
       - POSTGRES_PASSWORD=java_db
       - POSTGRES_DB=kameleoon
-    restart: always

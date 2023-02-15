@@ -7,7 +7,10 @@ import com.company.kameleoon.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
@@ -20,12 +23,6 @@ public class AuthController {
     public ResponseEntity<?> registration(@RequestBody AuthRequestDTO dto) {
         log.info("Registration profile = {}", dto);
         return ResponseEntity.ok(authService.registration(dto));
-    }
-
-    @GetMapping("/confirm-account")
-    public ResponseEntity<ApiResponse<?>> confirmProfileAccount(@RequestParam("token") String token) {
-        log.info("Confirm profile account!{}", token);
-        return ResponseEntity.ok(authService.confirm(token));
     }
 
     @PostMapping("/login")

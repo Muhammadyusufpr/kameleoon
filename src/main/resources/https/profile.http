@@ -1,0 +1,13 @@
+###
+GET http://localhost:8080/api/v1/profile/2c937081864b6a4701864b6a5f990000
+Content-Type: application/json
+
+###
+PUT http://localhost:8080/api/v1/profile/2c937081864b03f601864b0452bd0000
+Content-Type: application/json
+
+{
+  "name": "muhammadyusuf",
+  "email": "muhammadyusufgapirov@gmail.com",
+  "password": "123456"
+}
